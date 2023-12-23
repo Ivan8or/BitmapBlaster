@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="541a0ec6-7573-4fe5-a428-e0529868e29f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/volkov/ivan/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/volkov/ivan/ui/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secrets.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/volkov/ivan/bitmap/ImageTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/volkov/ivan/ui/PicPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/volkov/ivan/web/LocalImageLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/volkov/ivan/web/WebImageLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/volkov/ivan/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/volkov/ivan/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/volkov/ivan/ui/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/volkov/ivan/ui/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +52,25 @@
     "last_opened_file_path": "C:/Users/ivant/IdeaProjects/BitmapBlaster/src/test/java"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ivant\IdeaProjects\BitmapBlaster\src\test\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="ImageTransformer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="volkov.ivan.bitmap.ImageTransformer" />
+      <module name="BitmapBlaster.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="volkov.ivan.bitmap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="volkov.ivan.Main" />
       <module name="BitmapBlaster.main" />
@@ -71,6 +86,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ImageTransformer" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
