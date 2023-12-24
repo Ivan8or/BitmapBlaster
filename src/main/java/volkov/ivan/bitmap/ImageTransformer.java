@@ -6,37 +6,37 @@ import java.awt.image.BufferedImage;
 public class ImageTransformer {
 
 
-    private static final Color[] palette = {
+//    public static final Color[] SKRIBBL_PALETTE = {
+//
+//            new Color(255,255,255),
+//            new Color(193,193,193),
+//            new Color(239,19,11),
+//            new Color(255,113,0),
+//            new Color(255,228,0),
+//            new Color(0,204,0),
+//            new Color(0,255,145),
+//            new Color(0,178,255),
+//            new Color(35,31,211),
+//            new Color(163,0,186),
+//            new Color(223,105,167),
+//            new Color(255,172,142),
+//            new Color(160,82,45),
+//            new Color(0,0,0),
+//            new Color(80,80,80),
+//            new Color(116,11,7),
+//            new Color(194,56,0),
+//            new Color(232,162,0),
+//            new Color(0,70,25),
+//            new Color(0,120,93),
+//            new Color(0,86,158),
+//            new Color(14,8,101),
+//            new Color(85,0,105),
+//            new Color(135,53,84),
+//            new Color(204,119,77),
+//            new Color(99,48,13)
+//    };
 
-            new Color(255,255,255),
-            new Color(193,193,193),
-            new Color(239,19,11),
-            new Color(255,113,0),
-            new Color(255,228,0),
-            new Color(0,204,0),
-            new Color(0,255,145),
-            new Color(0,178,255),
-            new Color(35,31,211),
-            new Color(163,0,186),
-            new Color(223,105,167),
-            new Color(255,172,142),
-            new Color(160,82,45),
-            new Color(0,0,0),
-            new Color(80,80,80),
-            new Color(116,11,7),
-            new Color(194,56,0),
-            new Color(232,162,0),
-            new Color(0,70,25),
-            new Color(0,120,93),
-            new Color(0,86,158),
-            new Color(14,8,101),
-            new Color(85,0,105),
-            new Color(135,53,84),
-            new Color(204,119,77),
-            new Color(99,48,13)
-    };
-
-    public Image toBitmap(Image image, int resWidth, int resHeight) {
+    public static Image toBitmap(Image image, int resWidth, int resHeight, Color[] palette) {
         int originalWidth = image.getWidth(null);
         int originalHeight = image.getHeight(null);
 

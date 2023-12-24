@@ -6,6 +6,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.URL;
@@ -16,11 +17,11 @@ import java.util.stream.Collectors;
 
 public class WebImageLoader {
 
-    final static private String api_path = "https://api.unsplash.com/search/photos?page=1&per_page=3&orientation=squarish&query=SEARCH";
+    final static private String api_path = "https://api.unsplash.com/search/photos?page=1&per_page=10&orientation=squarish&query=SEARCH";
 
     public static BufferedImage[] load(String search) throws IOException {
         DefaultHttpClient httpclient = new DefaultHttpClient();
-        HttpGet httpget = new HttpGet(api_path.replaceFirst("SEARCH", search));
+        HttpGet httpget = new HttpGet(api_path.replaceFirst("SEARCH", search.replace(" ", "%20")));
 
         String secrets = "";
         for(String l : Files.readAllLines(Paths.get("secrets.txt")))
@@ -36,18 +37,24 @@ public class WebImageLoader {
                 .lines()
                 .collect(Collectors.joining("\n"));
 
-
         JSONObject obj = new JSONObject(text);
 
-        String imageURL1 = obj.getJSONArray("results").getJSONObject(0).getJSONObject("urls").getString("small");
-        String imageURL2 = obj.getJSONArray("results").getJSONObject(1).getJSONObject("urls").getString("small");
-        String imageURL3 = obj.getJSONArray("results").getJSONObject(2).getJSONObject("urls").getString("small");
-
-        String[] urls = {imageURL1, imageURL2, imageURL3 };
-        BufferedImage[] imgs = new BufferedImage[urls.length];
-
-        for(int i = 0; i < urls.length; i++) {
-            imgs[i] = ImageIO.read(new URL(urls[i]));
+        BufferedImage[] imgs = new BufferedImage[10];
+        for(int i = 0; i < imgs.length; i++) {
+            try {
+                String imageURL1 = obj.getJSONArray("results").getJSONObject(i).getJSONObject("urls").getString("small");
+                imgs[i] = ImageIO.read(new URL(imageURL1));
+            }catch(Exception e) {
+                BufferedImage blank = new BufferedImage(400,400,BufferedImage.TYPE_INT_RGB);
+                Graphics2D graphics = blank.createGraphics();
+                graphics.setPaint ( Color.BLACK );
+                graphics.fillRect ( 0, 0, 400, 400 );
+                graphics.setPaint ( Color.MAGENTA );
+                graphics.fillRect ( 0, 0, 200, 200 );
+                graphics.fillRect ( 200, 200, 400, 400 );
+                graphics.dispose();
+                imgs[i] = blank;
+            }
         }
         return imgs;
     }
